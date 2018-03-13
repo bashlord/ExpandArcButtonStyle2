@@ -1,0 +1,6 @@
+framework module Pods_ExpandingArcButtonAbstract_ExpandingArcButton {
+  umbrella header "Pods-ExpandingArcButtonAbstract-ExpandingArcButton-umbrella.h"
+
+  export *
+  module * { export * }
+}

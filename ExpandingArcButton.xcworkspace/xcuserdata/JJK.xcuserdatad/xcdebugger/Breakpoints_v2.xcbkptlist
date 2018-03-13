@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ExpandingArcButton/SubArcButton.swift"
+            timestampString = "542642331.169673"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "SubArcButton"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ExpandingArcButton.SubArcButton.triPath.getter : Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UIBezierPath&gt;"
+                  moduleName = "ExpandingArcButton"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/JJK/Desktop/Farsight/ExpandingArcButton/ExpandingArcButton/SubArcButton.swift"
+                  timestampString = "540355417.318751"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "109">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ExpandingArcButton.SubArcButton.triPath.setter : Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UIBezierPath&gt;"
+                  moduleName = "ExpandingArcButton"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/JJK/Desktop/Farsight/ExpandingArcButton/ExpandingArcButton/SubArcButton.swift"
+                  timestampString = "540355417.324491"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "112">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ExpandingArcButton.SubArcButton.init(frame: __C.CGRect, fillColor: __ObjC.CGColor, borderColor: __ObjC.CGColor, index: Swift.Int, title: Swift.String, total: Swift.Int, arcCenter: __C.CGPoint, radius: CoreGraphics.CGFloat) -&gt; ExpandingArcButton.SubArcButton"
+                  moduleName = "ExpandingArcButton"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/JJK/Desktop/Farsight/ExpandingArcButton/ExpandingArcButton/SubArcButton.swift"
+                  timestampString = "540355417.328045"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "348">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ExpandingArcButton.SubArcButton.init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;ExpandingArcButton.SubArcButton&gt;"
+                  moduleName = "ExpandingArcButton"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/JJK/Desktop/Farsight/ExpandingArcButton/ExpandingArcButton/SubArcButton.swift"
+                  timestampString = "540355417.331941"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "132">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ExpandingArcButton/SubArcButton.swift"
+            timestampString = "542642331.173196"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ExpandingArcButton.SubArcButton.__deallocating_deinit"
+                  moduleName = "ExpandingArcButton"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/JJK/Desktop/Farsight/ExpandingArcButtonStyle2/ExpandingArcButton/SubArcButton.swift"
+                  timestampString = "542289259.144201"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ExpandingArcButton.SubArcButton.__allocating_init() -&gt; ExpandingArcButton.SubArcButton"
+                  moduleName = "ExpandingArcButton"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/JJK/Desktop/Farsight/ExpandingArcButtonStyle2/ExpandingArcButton/SubArcButton.swift"
+                  timestampString = "542289259.1473269"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ExpandingArcButton.SubArcButton.init() -&gt; ExpandingArcButton.SubArcButton"
+                  moduleName = "ExpandingArcButton"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/JJK/Desktop/Farsight/ExpandingArcButtonStyle2/ExpandingArcButton/SubArcButton.swift"
+                  timestampString = "542289259.149647"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "8">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
