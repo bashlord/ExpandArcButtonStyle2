@@ -68,7 +68,7 @@ class ExpandingArcButton: UIView, CAAnimationDelegate,UICollisionBehaviorDelegat
     var orgCenter: CGPoint!
     // duration to be divided depending on titles.count and delay
     //  sequential animations by that value
-    var animationOffset: CGFloat = 0.5
+    var animationOffset: CGFloat = 0.25
     // text titles for the subarcs
     var titles = [String]()
     
@@ -219,7 +219,7 @@ class ExpandingArcButton: UIView, CAAnimationDelegate,UICollisionBehaviorDelegat
         conOuterCirclePath.usesEvenOddFillRule = true
         
         mainButtonPath = UIBezierPath(arcCenter: CGPoint(x: expandedFrame.width/2, y: expandedFrame.width/2),
-                                      radius: 22,
+                                      radius: self.mainButton.frame.width/2,
                                       startAngle: CGFloat(0.0),
                                       endAngle: CGFloat(2.0 * .pi),
                                       clockwise: true)
@@ -390,22 +390,35 @@ class ExpandingArcButton: UIView, CAAnimationDelegate,UICollisionBehaviorDelegat
                                 self.isUserInteractionEnabled = true
                                 self.state = 1
                             })
+                            var i:CGFloat = 0.0
+                            for b in self.expandButtons{
+                                b.textLayer.removeFromSuperlayer()
+                                b.textLayer.position = CGPoint(x: self.expandedFrame.width/2, y: self.expandedFrame.width/2)
+                            }
                             
+                            for j in 0..<self.expandButtons.count/2{
+                                //for b in self.expandButtons{
+                                self.delay(Double(i), closure: {
+                                    //let jj = (self.expandButtons.count-1) - j
+                                    let jj = self.expandButtons.count/2 + j
+                                    // set the CATextLayer to the cente rof the now bigger and expanded view
+                                    self.layer.addSublayer(self.expandButtons[j].shapeLayer)
+                                    self.layer.addSublayer(self.expandButtons[j].textLayer)
+                                    self.expandButtons[j].applyShapeLayer(flag: 0 )
+                                    self.expandButtons[j].applyTextLayer(flag: 0)
+                                    
+                                    self.layer.addSublayer(self.expandButtons[jj].shapeLayer)
+                                    self.layer.addSublayer(self.expandButtons[jj].textLayer)
+                                    
+                                    self.expandButtons[jj].applyShapeLayer(flag: 0 )
+                                    self.expandButtons[jj].applyTextLayer(flag: 0)
+                                })
+                                i += ( self.animationOffset / CGFloat(self.titles.count/2) )
+                            }
                             self.frame = self.expandedFrame
                             self.mainButton.center = self.expandCenter
-                            var i:CGFloat = 0.0
                             self.layer.addSublayer(self.outerCircleShapeLayer)
                             self.applyOuterCircleAnimation(flag: 0)
-                            for b in self.expandButtons{
-                                self.delay(Double(i), closure: {
-                                    // set the CATextLayer to the cente rof the now bigger and expanded view
-                                    self.layer.addSublayer(b.shapeLayer)
-                                    self.layer.addSublayer(b.textLayer)
-                                    b.applyShapeLayer(flag: 0 )
-                                    b.applyTextLayer(flag: 0)
-                                })
-                                i += ( self.animationOffset / CGFloat(self.titles.count) )
-                            }
                         }else if self.state == 1{
                             // currently expanded, will transition to contracted
                             self.mainButton.isUserInteractionEnabled = false
@@ -417,12 +430,16 @@ class ExpandingArcButton: UIView, CAAnimationDelegate,UICollisionBehaviorDelegat
                             })
                             self.frame = self.orgFrame
                             self.mainButton.center = self.orgCenter
-                            
-                            for b in self.expandButtons{
-                                b.applyTextLayer(flag: 1)
-                                b.applyShapeLayer(flag: 1)
-                            }
                             self.applyOuterCircleAnimation(flag: 1)
+
+                            //var i: CGFloat = 0.0
+                            for b in self.expandButtons.reversed(){
+                            //    self.delay(Double(i), closure: {
+                                    b.applyTextLayer(flag: 1)
+                                    b.applyShapeLayer(flag: 1)
+                              //  })
+                                //i += ( self.animationOffset / CGFloat(self.titles.count) )
+                            }
                         }
                     }
                 }
@@ -523,7 +540,7 @@ class ExpandingArcButton: UIView, CAAnimationDelegate,UICollisionBehaviorDelegat
         group.delegate = self
         group.animations = NSArray(arrayLiteral: animation1, animation) as? [CAAnimation]
         group.isRemovedOnCompletion = false
-        group.duration = CFTimeInterval(self.animDuration + self.expandButtons[0].animDuration)
+        group.duration = CFTimeInterval( self.expandButtons[0].animDuration)
         group.fillMode = kCAFillModeForwards
         
         if flag == 0{
@@ -550,7 +567,7 @@ class ExpandingArcButton: UIView, CAAnimationDelegate,UICollisionBehaviorDelegat
             self.arrowShapeLayer.removeFromSuperlayer()
             self.arrowShapeLayer.removeAllAnimations()
         }
-
+        
     }
     
     func collisionBehavior(_ behavior: UICollisionBehavior, beganContactFor item: UIDynamicItem, withBoundaryIdentifier identifier: NSCopying?, at p: CGPoint) {

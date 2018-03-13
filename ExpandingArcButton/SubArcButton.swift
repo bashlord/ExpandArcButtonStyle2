@@ -245,6 +245,7 @@ class SubArcButton: NSObject, CAAnimationDelegate{
         
         let animation1 = CABasicAnimation(keyPath: "position")
         if flag == 0{
+            //textLayer.position = CGPoint(x: expandedFrame.width/2, y: expandedFrame.width/2 )
             animation1.fromValue = CGPoint(x: expandedFrame.width/2, y: expandedFrame.width/2 )
             animation1.toValue = originPointForTextContractedPoint
             textLayer.position = originPointForTextContractedPoint
@@ -257,13 +258,13 @@ class SubArcButton: NSObject, CAAnimationDelegate{
         
         let animation2 = CABasicAnimation(keyPath: "fontSize")
         if flag == 0{
-            animation2.fromValue = 1.0
+            animation2.fromValue = 0.0
             animation2.toValue =  25.0
             textLayer.fontSize = 25.0
         }else{
             animation2.fromValue = 25.0
-            animation2.toValue = 1.0
-            textLayer.fontSize = 1.0
+            animation2.toValue = 0.0
+            textLayer.fontSize = 0.0
         }
         animation2.fillMode = kCAFillModeForwards
         
@@ -370,6 +371,8 @@ class SubArcButton: NSObject, CAAnimationDelegate{
         }else if textLayer.animation(forKey: "textLayer1") == anim{
             self.textLayer.removeAllAnimations()
             self.textLayer.removeFromSuperlayer()
+            //self.textLayer.removeAllAnimations()
+            //self.textLayer.frame = largeFontFrame
         }else if textLayer.animation(forKey: "textLayer3") == anim{
             
             //self.textLayer.fontSize = 35.0
@@ -382,6 +385,7 @@ class SubArcButton: NSObject, CAAnimationDelegate{
     
     func animationDidStart(_ anim: CAAnimation) {
         //print("animationDidStart")
+        
     }
     
     func resetColors(){

@@ -13,8 +13,8 @@ import RxGesture
 
 class ViewController: UIViewController {
     var expandingArcButton : ExpandingArcButton!
-    var buttonWidth: CGFloat = 60
-    var buttonOrg: CGFloat = 30
+    var buttonWidth: CGFloat = 44
+    var buttonOrg: CGFloat = 22
     // 2-3 = 0.5 4-5 = 0.6 6 = 0.65
     var titles = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
     let disposeBag = DisposeBag()
